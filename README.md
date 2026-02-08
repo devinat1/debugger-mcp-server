@@ -15,7 +15,7 @@ The two components communicate over HTTP. The extension writes its port to `~/.a
 
 ### 1. Install the VS Code Extension
 
-Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) from Open VSX. Once active, it starts a bridge server on port **7070** (configurable via `agenticDebugger.bridgePort` in VS Code settings).
+Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) on Cursor or Vscode. Once active, it starts a bridge server on port **7070** (configurable via `agenticDebugger.bridgePort` in VS Code settings).
 
 ### 2. Start the MCP Server
 
