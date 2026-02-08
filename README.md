@@ -5,7 +5,15 @@ An MCP server that enables AI agents to debug code in VS Code. It exposes debugg
 ## Setup
 
 1. Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) on Cursor or VS Code
-2. Add the MCP server to your client configuration (e.g. Claude Desktop, Claude Code, Cursor):
+2. Add the MCP server to your client configuration:
+
+**Claude Code:**
+
+```bash
+claude mcp add debugger --scope user -- npx debugger-mcp-server
+```
+
+**Claude Desktop, Cursor, or other MCP clients:**
 
 ```json
 {
