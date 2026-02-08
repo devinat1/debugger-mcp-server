@@ -17,17 +17,7 @@ The two components communicate over HTTP. The extension writes its port to `~/.a
 
 Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) on Cursor or Vscode. Once active, it starts a bridge server on port **7070** (configurable via `agenticDebugger.bridgePort` in VS Code settings).
 
-### 2. Start the MCP Server
-
-```bash
-npm install
-npm run build
-npm start
-```
-
-The server starts on port **6090** by default. Override with `PORT=8080 npm start`.
-
-### 3. Connect Your AI Agent
+### 2. Connect Your AI Agent
 
 Add this to your MCP client configuration (e.g. Claude Desktop, Claude Code, Cursor):
 
@@ -35,11 +25,14 @@ Add this to your MCP client configuration (e.g. Claude Desktop, Claude Code, Cur
 {
   "mcpServers": {
     "debugger": {
-      "url": "http://localhost:6090/mcp"
+      "command": "npx",
+      "args": ["debugger-mcp-server"]
     }
   }
 }
 ```
+
+The package is available on [npm](https://www.npmjs.com/package/debugger-mcp-server).
 
 ## Available Tools
 
