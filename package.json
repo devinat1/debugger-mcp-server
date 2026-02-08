@@ -4,6 +4,9 @@
   "description": "MCP server for VS Code debugging via bridge extension",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "debugger-mcp-server": "dist/index.js"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/index.ts",

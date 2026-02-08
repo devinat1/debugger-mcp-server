@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { createApp } from "./server.js";
 
 const DEFAULT_PORT = 6090;
