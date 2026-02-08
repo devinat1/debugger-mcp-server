@@ -2,24 +2,10 @@
 
 An MCP server that enables AI agents to debug code in VS Code. It exposes debugging tools (breakpoints, stepping, variable inspection) over the [Model Context Protocol](https://modelcontextprotocol.io), bridging to a companion VS Code extension that controls the actual debugger.
 
-## Architecture
-
-```
-AI Agent  <-->  MCP Server (:6090)  <-->  VS Code Extension Bridge (:7070)  <-->  VS Code Debugger
-                (this repo)                (agentic-debugger extension)
-```
-
-The two components communicate over HTTP. The extension writes its port to `~/.agentic-debugger/bridge-port`, which the MCP server reads to discover the bridge automatically.
-
 ## Setup
 
-### 1. Install the VS Code Extension
-
-Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) on Cursor or Vscode. Once active, it starts a bridge server on port **7070** (configurable via `agenticDebugger.bridgePort` in VS Code settings).
-
-### 2. Connect Your AI Agent
-
-Add this to your MCP client configuration (e.g. Claude Desktop, Claude Code, Cursor):
+1. Install [Agentic Debugger](https://open-vsx.org/extension/devinat1/agentic-debugger) on Cursor or VS Code
+2. Add the MCP server to your client configuration (e.g. Claude Desktop, Claude Code, Cursor):
 
 ```json
 {
