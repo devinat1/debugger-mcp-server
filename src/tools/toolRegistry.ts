@@ -1,0 +1,30 @@
+import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { registerAnalyzeCodeTool } from "./analysis/analyzeCode.js";
+import { registerSetBreakpointsTool } from "./breakpoints/setBreakpoints.js";
+import { registerRemoveBreakpointsTool } from "./breakpoints/removeBreakpoints.js";
+import { registerListBreakpointsTool } from "./breakpoints/listBreakpoints.js";
+import { registerStartDebugSessionTool } from "./debugSession/startDebugSession.js";
+import { registerStopDebugSessionTool } from "./debugSession/stopDebugSession.js";
+import { registerStepOverTool } from "./debugSession/stepOver.js";
+import { registerStepIntoTool } from "./debugSession/stepInto.js";
+import { registerStepOutTool } from "./debugSession/stepOut.js";
+import { registerContinueExecutionTool } from "./debugSession/continueExecution.js";
+import { registerGetVariablesTool } from "./debugSession/getVariables.js";
+import { registerGetCallStackTool } from "./debugSession/getCallStack.js";
+import { registerEvaluateExpressionTool } from "./debugSession/evaluateExpression.js";
+
+export const registerAllTools = (params: { server: McpServer }): void => {
+  registerAnalyzeCodeTool(params);
+  registerSetBreakpointsTool(params);
+  registerRemoveBreakpointsTool(params);
+  registerListBreakpointsTool(params);
+  registerStartDebugSessionTool(params);
+  registerStopDebugSessionTool(params);
+  registerStepOverTool(params);
+  registerStepIntoTool(params);
+  registerStepOutTool(params);
+  registerContinueExecutionTool(params);
+  registerGetVariablesTool(params);
+  registerGetCallStackTool(params);
+  registerEvaluateExpressionTool(params);
+};
