@@ -1,5 +1,4 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { registerAnalyzeCodeTool } from "./analysis/analyzeCode.js";
 import { registerSetBreakpointsTool } from "./breakpoints/setBreakpoints.js";
 import { registerRemoveBreakpointsTool } from "./breakpoints/removeBreakpoints.js";
 import { registerListBreakpointsTool } from "./breakpoints/listBreakpoints.js";
@@ -14,7 +13,6 @@ import { registerGetCallStackTool } from "./debugSession/getCallStack.js";
 import { registerEvaluateExpressionTool } from "./debugSession/evaluateExpression.js";
 
 export const registerAllTools = (params: { server: McpServer }): void => {
-  registerAnalyzeCodeTool(params);
   registerSetBreakpointsTool(params);
   registerRemoveBreakpointsTool(params);
   registerListBreakpointsTool(params);

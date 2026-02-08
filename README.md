@@ -24,7 +24,6 @@ The package is available on [npm](https://www.npmjs.com/package/debugger-mcp-ser
 
 | Category | Tool | Description |
 |---|---|---|
-| Analysis | `analyzeCode` | Analyze code with the VS Code language server |
 | Breakpoints | `setBreakpoints` | Set breakpoints in a file |
 | Breakpoints | `removeBreakpoints` | Remove breakpoints |
 | Breakpoints | `listBreakpoints` | List all active breakpoints |

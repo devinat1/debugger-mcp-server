@@ -32,16 +32,6 @@ export interface ListBreakpointsResponse {
   breakpoints: BreakpointInfo[];
 }
 
-export interface AnalyzeCodeResponse {
-  locations: Array<{
-    filePath: string;
-    lineNumber: number;
-    codeSnippet: string;
-    reason: string;
-  }>;
-  summary: string;
-}
-
 export interface StartDebugSessionResponse {
   sessionId: string;
   name: string;
